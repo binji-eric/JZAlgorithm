@@ -1,5 +1,5 @@
+// method1
 function GetLeastNumbers_Solution(input, k)
-
 { 
     const len = input.length;
     if(k > input.length)
@@ -30,4 +30,51 @@ const sink = (arr, start, len) => {
   }
 }
 
+
+
+// method2
+function GetLeastNumbers_Solution(input, k)
+{ 
+    var result = [];
+    if (input.length < 0 || k > input.length || k <= 0) {
+        return false;
+    }
+    var start = 0;
+    var end = input.length - 1;
+    var p = partition(input, start, end);
+    while (p !== (k - 1)) {
+        if (p > (k - 1)) {
+            end = p - 1;
+            p = partition(input, start, end);
+        } else {
+            start = p + 1;
+            p = partition(input, start, end);
+        }
+    }
+    for (var i = 0; i < k; i++) {
+        result.push(input[i]);
+    }
+    return result.sort();
+}
+
+
+function swap(arr, i, j) {
+    var temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+}
+
+const partition = (arr, low, high) => {
+  const pivot = Math.floor(Math.random()*(high - low +1)) + low;
+  swap(arr, pivot, high);
+  let index = low;
+  for(let i = low; i<=high; i++) {
+    if(arr[i] < arr[high]){
+      swap(arr, index, i);
+      index++;
+    }
+  }
+  swap(arr, index, high);
+  return index;
+}
 
