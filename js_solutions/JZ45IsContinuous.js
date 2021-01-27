@@ -8,6 +8,7 @@ function IsContinuous(numbers)
         // 数字越界，false
         if(numbers[i] < 0 || numbers[i] > 13)
             return false;
+        // 跳过大小王
         if(numbers[i] === 0) {
             continue;
         }

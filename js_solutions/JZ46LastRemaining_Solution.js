@@ -19,6 +19,8 @@ function LastRemaining_Solution(n, m)
     }
     return arr.pop();
     */
+
+    
     // method2 
     let p = 0;
     for(let i = 2; i <=n; i++){
