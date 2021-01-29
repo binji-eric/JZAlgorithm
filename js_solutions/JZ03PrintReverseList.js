@@ -1,3 +1,4 @@
+// 输入一个链表，按链表从尾到头的顺序返回
 function printListFromTailToHead(head)
 {
     const arr = [];
@@ -19,7 +20,7 @@ function printListFromTailToHead(head)
 
 function printListFromTailToHead(head)
 {
-    // 这个题就是翻转链表
+    // 不断从头部插入
     let arr1 = [], cur = head;
     while(cur) {
         arr1.unshift(cur.val);
