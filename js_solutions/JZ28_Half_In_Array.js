@@ -9,6 +9,7 @@ function MoreThanHalfNum_Solution(numbers)
     let low = 0, high = len -1 ;
     const mid = low + Math.floor((high - low + 1)/2);
     let ok = 0;
+    // 得到中间位置为mid
     while(low <= high) {
         let pivot = partition(numbers, low, high);
         if(pivot == mid) {
@@ -22,6 +23,7 @@ function MoreThanHalfNum_Solution(numbers)
     }
     return checkMoreThanHalf(numbers, numbers[mid])? numbers[mid] : 0;
 }
+
 
 function partition(a, left, right) {
     const pivot = Math.floor(Math.random()*(right - left + 1)) + left;
@@ -43,6 +45,7 @@ function swap(input, low, high) {
     input[low] = temp;
 }
 
+// 检查是否超过一半
 function checkMoreThanHalf(numbers, num) {
   let times = 0;
   for (let i = 0; i < numbers.length; i++) {

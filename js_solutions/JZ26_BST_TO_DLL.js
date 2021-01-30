@@ -17,7 +17,7 @@ function Convert(pRootOfTree)
 //     let isFirst = true;
 //     inorder(pRootOfTree);
 //     return head;
-    // 使用非递归的方法
+    // 使用中序遍历，非递归的方法
     if(!pRootOfTree) {
         return null;
     }
@@ -43,19 +43,20 @@ function Convert(pRootOfTree)
     return root;
 }
 
-// function inorder(node) {
-//     if(node == null) {
-//         return;
-//     }
-//     inorder(node.left);
-//     if(isFirst) {
-//         isFirst = false;
-//         pre = node;
-//         head = node;
-//     } else {
-//         pre.right = node;
-//         node.left = pre;
-//         pre = node;
-//     }
-//     inorder(node.right);
-// }
+ // 使用中序遍历，递归的方法
+function inorder(node) {
+    if(node == null) {
+        return;
+    }
+    inorder(node.left);
+    if(isFirst) {
+        isFirst = false;
+        pre = node;
+        head = node;
+    } else {
+        pre.right = node;
+        node.left = pre;
+        pre = node;
+    }
+    inorder(node.right);
+}

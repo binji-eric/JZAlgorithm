@@ -1,3 +1,6 @@
+// 输入两棵二叉树A，B，判断B是不是A的子结构。（
+// ps：我们约定空树不是任意一个树的子结构）
+
 function HasSubtree(pRoot1, pRoot2){
     if(pRoot1 == null || pRoot2 == null){
         return false;
@@ -14,6 +17,7 @@ function HasSubtree(pRoot1, pRoot2){
 function isSubTree(pRoot1, pRoot2){
         // 直接判断时，pRoot2可以为空，证明是遍历完成
         if(pRoot2 == null ) return true;
+        
         // 如果子树为空，但是主树不空，直接返回错误
         else if(pRoot1 == null) return false;
         // 根处相等，看后面的比较
