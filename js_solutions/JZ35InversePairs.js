@@ -1,32 +1,6 @@
-
-// function InversePairs(data) {
-//   if (!data || data.length < 2) return 0;
-//   let count = 0;
-//   count = mergeCount(data, 0, data.length - 1);
-//   return count % 1000000007;
-// }
-// function mergeCount(data, start, end) {
-//     if (start === end) 
-//         return 0;
-//     const copy = data.slice();
-//     const mid = (start + end) >> 1;
-//     const left = mergeCount(data, start, mid); // 注意参数，copy作为data传入
-//     const right = mergeCount(data, mid + 1, end); // 注意参数，copy作为data传入
-//     let p = start, q = mid + 1, count = 0,  k = start;
-//     while(k <= end) {
-//         if(p > mid) {
-//             data[k++] = copy[q++];
-//         } else if(q > end) {
-//             data[k++] = copy[p++];
-//         } else if(copy[p] < copy[q]) {
-//             data[k++] = copy[p++];
-//         } else {
-//             count += q - p;
-//             data[k++] = copy[q++];
-//         }
-//     }
-//     return count + left + right;
-// }
+// 在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。
+// 输入一个数组,求出这个数组中的逆序对的总数P。并将P对1000000007取模的结果输出。 
+// 即输出P%1000000007
 
 
 function InversePairs(data) {
