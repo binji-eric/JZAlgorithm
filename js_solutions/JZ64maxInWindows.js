@@ -1,4 +1,4 @@
-
+// 给定一个数组和滑动窗口的大小，找出所有滑动窗口里数值的最大值。
 // 牛客网的测试平台有问题，可以在leetcode上测试通过
 function maxInWindows(num, size)
 {

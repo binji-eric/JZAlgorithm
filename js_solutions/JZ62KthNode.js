@@ -1,3 +1,5 @@
+// 给定一棵二叉搜索树，请找出其中的第k小的结点。
+
 /* function TreeNode(x) {
     this.val = x;
     this.left = null;
