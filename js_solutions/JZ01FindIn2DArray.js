@@ -27,6 +27,8 @@ function Find(target, array)
 }
 
 
+
+
 // method2 
 function Find(target, array)
 {
